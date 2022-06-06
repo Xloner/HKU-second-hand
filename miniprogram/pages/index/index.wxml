@@ -1,0 +1,58 @@
+<!--pages/index/index.wxml-->
+<view class="news">
+  <view class="news_left">
+      <image src="../../images/search.png"></image>
+      <view class="news_title">
+        Type to search
+      </view>
+  </view>
+</view>
+<view class="banner">
+  <swiper class="swip_main" indicator-dots autoplay interval="3000" circular  bindtap="banner_jump">
+    <block wx:for="{{mglist}}">
+      <swiper-item>
+        <image style="width: 100%;height: 100%;" mode="aspectFill" src="{{item.picture}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="nav">
+  <view class="nav-banner" id='1' bindtap="showlist">
+    <view class="nav-banner-text">  ALL  </view>
+  </view>
+  <view class="nav-banner" id='2' bindtap="showlist">
+    <view class="nav-banner-text">  Hot!  </view>
+  </view>
+  <view class="nav-banner" id='3' bindtap="showlist">
+    <view class="nav-banner-text">  Book  </view>
+  </view>
+  <view class="nav-banner" id='4' bindtap="showlist">
+    <view class="nav-banner-text">  Chair  </view>
+  </view>
+  <view class="nav-banner" id='5' bindtap="showlist">
+    <view class="nav-banner-text">  Electronic  </view>
+  </view>
+</view>
+<view class="goods">
+  <view class="goods-box" wx:for="{{goods}}" wx:for-item="item" wx:key="-id" bindtap="sjowbs" id="{{item._id}}" wx:if="{{index<10}}">
+    <view class="owner-picture">
+      <image src="{{item.ownerPicture}}" mode="scaleToFill"></image>
+    </view>
+    <view class="owner-name">
+    {{item.owner}}
+    </view>
+    <view class="auth" wx:if="{{item.auth==str}}">
+      <image src="../../images/auth.jpg" mode="scaleToFill"></image>
+    </view>
+    <view class="goods-picture">
+      <image src="{{item.picture}}" mode="scaleToFill"></image>
+    </view>
+    <view class="goods-title">
+    {{item.name}}
+    </view>
+    <view class="price">
+    {{item.price}} HKD
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,148 @@
+/* pages/goodsDetail/goodsDetail.wxss */
+.ownerInfo{
+  width: 90%;
+  height: 70rpx;
+  margin-top: 30rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 20rpx;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(88, 88, 88);
+}
+
+.ownerPicture{
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 60rpx;
+  height: 60rpx;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ownerPicture image{
+  width: 100%;
+  height: 100%;
+
+}
+.owner{
+  width: fit-content;
+  height: 100%;
+  margin-top: 5rpx;
+  float: left;
+  font-size: 45rpx;
+}
+.school{
+  width: fit-content;
+  height: fit-content;
+  margin-top: 5rpx;
+  margin-left: 15rpx;
+  float: left;
+  font-size: 35rpx;
+  color: rgb(114, 114, 114);
+  border-radius: 10rpx;
+}
+.auth{
+  width: 5%;
+  height: 30rpx;
+  margin-top: 7rpx;
+  margin-left: 10rpx;
+  float: left;
+
+}
+
+.auth image{
+  height: 100%;
+  width: 100%;
+}
+.title{
+  width: fit-content;
+  font-size: 50rpx;
+  font-weight: 800;
+  margin-left: 7%;
+  margin-top: 4%;
+}
+.price{
+  width: fit-content;
+  font-size: 40rpx;
+  font-weight: 300;
+  margin-left: 7%;
+  color: rgb(241, 54, 54);
+}
+.condition{
+  width: fit-content;
+  font-size: 40rpx;
+  font-weight: 300;
+  margin-left: 7%;
+}
+.detail{
+  width: fit-content;
+  font-size: 35rpx;
+  font-weight: 300;
+  margin-left: 7%;
+}
+.picture{
+  width: 85%;
+  margin-left: 7.5%;
+  margin-top: 30rpx;
+  height: 500rpx;
+  border-radius: 80rpx;
+  border: 3px solid rgb(64, 147, 255);
+  overflow: hidden;
+}
+.picture image{
+  width: 100%;
+  height: 100%;
+}
+.time{
+  margin-top: 20rpx;
+  float: right;
+  font-size: 30rpx;
+  color: rgb(107, 107, 107);
+}
+.opt{
+  width: 70%;
+  height: 100rpx;
+  margin-left: 15%;
+  position:fixed;
+  bottom: 7%;
+
+}
+.left{
+  width: 15%;
+  height: 100%;
+
+  float: left;
+}
+.left image{
+  height: 100%;
+  width: 100%;
+}
+.right{
+  width: 15%;
+  height: 100%;
+
+  float: right;
+}
+.right image{
+  height: 100%;
+  width: 100%;
+}
+.buy{
+  width: 40%;
+  height: 64rpx;
+  text-align: center;
+  margin-top: 18rpx;
+  margin-left: 15%;
+  float: left;
+  font-size: 42rpx;
+  color: white;
+  border-radius: 10rpx;
+  border: 1px solid #55b669;
+  background-color: #55b669;
+}
+.a{
+  margin-top: 30rpx;
+  background-color: rgb(151, 151, 151);
+  width:100%;
+  height: 2rpx;
+}

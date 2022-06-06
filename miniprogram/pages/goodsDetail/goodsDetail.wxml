@@ -1,0 +1,65 @@
+<!--pages/goodsDetail/goodsDetail.wxml-->
+<!--
+<view class="banner">
+  <swiper class="swip_main" indicator-dots autoplay interval="3000" circular>
+    <block wx:for="{{mglist}}">
+      <swiper-item>
+        <image style="width: 100%;height: 100%;" mode="aspectFill" src="{{item.picture}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+-->
+<view class="ownerInfo">
+  <view class="ownerPicture">
+    <image src="{{ownerPicture}}" mode="scaleToFill"></image>
+  </view>
+  <view class="owner">
+    {{owner}}
+  </view>
+  <view class="school">
+    {{school}}
+  </view>
+  <view class="auth" wx:if="{{auth==str}}">
+    <image src="../../images/auth.jpg" mode="scaleToFill"></image>
+  </view>
+</view>
+<view class="info">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="price">
+    {{price}} HKD
+  </view>
+  <view class="condition">
+    成色：{{condition}}
+  </view>
+  <view class="detail">
+    详细介绍：{{detail}}
+  </view>
+  <view class="picture">
+    <image src="{{picture}}" mode="scaleToFill"></image>
+  </view>
+  <view class="time">
+    上架时间：{{time}}
+  </view>
+</view>
+<view class="opt">
+  <view class="left">
+      <image src="../../images/like.png" mode="scaleToFill"></image>
+  </view>
+  <view class="buy">
+    点击购买
+  </view>
+  <view class="right">
+      <image src="../../images/share.png" mode="scaleToFill"></image>
+  </view>
+</view>
+
+<view class="a">
+</view>
+<!--
+<view class="goods_name">
+  <rich-text class="rich" nodes="{{html}}"></rich-text>
+</view>
+-->

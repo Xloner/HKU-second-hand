@@ -1,0 +1,100 @@
+<!--pages/usercenter/usercenter.wxml <image src="../../images/redwall.jpeg"></image>-->
+<view class="top">
+  
+</view>
+<view class="logo">
+  <view class="logo_left">
+    <view class="logo_photo">
+      <image  src="{{userinfor.avatarUrl}}"  mode="scaleToFill"/>
+    </view>
+    <view class="logo_name">
+      <view> {{userinfor.nickName}}</view>
+    </view>
+  </view>
+  <view class="logo_right1" wx:for="{{allData}}"  wx:if-item="item"  bindtap="show">
+    <view class="logo_right"  wx:if="{{item.name==userinfor.nickName}}">
+      <view class="name" wx:if="{{item.name==userinfor.nickName}}">
+        <view class="name_left">
+          用户名：
+        </view>
+        <view class="name_right">
+          <view> {{userinfor.nickName}}</view>
+        </view>
+      </view>
+      <view class="school">
+        <view class="school_left">
+          学校：
+        </view>
+        <view class="school_right">
+          <view class="school_name"> {{item.school}}</view>
+          <view class="auth" wx:if="{{item.auth>0}}">
+            已认证
+          </view>
+          <view class="auth" wx:else>
+            未认证
+          </view>
+        </view>
+      </view>
+      <view class="phone">
+        <view class="phone_left">
+          电话：
+        </view>
+        <view class="phone_right">
+          <view> {{item.phone}}</view>
+        </view>
+      </view>
+      <view class="email">
+        <view class="email_left">
+          Email：
+        </view>
+        <view class="email_right">
+          <view> {{item.email}}</view>
+        </view>
+      </view>
+      <view class="authButton_Nothing"  type="default"  bindtap="doAuth" wx:if="{{item.auth>0}}"> 
+      </view>
+      <view class="authButton"  type="default"  bindtap="doAuth" wx:else> 
+        认证学校
+      </view>
+    </view>
+
+  </view>
+</view>
+<button class="login" type="default"  bindtap="getUserInfor" wx:if="{{index==1}}"> 登录</button>
+<view class="nav">
+  <view class="nav-banner" id='1' bindtap="publish">
+    <view class="picture">
+      <image src="../../images/publishinmy.png" mode="scaleToFill"></image>
+    </view>
+    <view class="nav-banner-text">  我发布的  </view>
+  </view>
+  <view class="nav-banner" id='2' bindtap="buy">
+    <view class="picture">
+      <image src="../../images/buy.png" mode="scaleToFill"></image>
+    </view>
+    <view class="nav-banner-text">  我买到的  </view>
+  </view>
+  <view class="nav-banner" id='3' bindtap="message">
+    <view class="picture">
+      <image src="../../images/messageinmy.png" mode="scaleToFill"></image>
+    </view>
+    <view class="nav-banner-text">  我的私信  </view>
+  </view>
+  <view class="nav-banner" id='4' bindtap="question">
+    <view class="picture">
+      <image src="../../images/question.png" mode="scaleToFill"></image>
+    </view>
+    <view class="nav-banner-text">  问题反馈  </view>
+  </view>
+</view>
+<view class="banner">
+  <swiper class="swip_main" indicator-dots autoplay interval="3000" circular>
+    <block wx:for="{{mglist}}">
+      <swiper-item>
+        <image style="width: 100%;height: 100%;" mode="aspectFill" src="{{item.picture}}" mode="scaleToFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+

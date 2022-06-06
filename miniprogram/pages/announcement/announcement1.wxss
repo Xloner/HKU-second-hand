@@ -1,0 +1,11 @@
+/* pages/announcement/announcement1.wxss */
+.title{
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+
+}
+.detail{
+  margin-left: 3%;
+  margin-right: 3%;
+}
